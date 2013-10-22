@@ -1,0 +1,36 @@
+program
+	integer i;
+	string s1, s2;
+	real r1, r2, r3;
+	boolean b1;
+begin
+/*
+Kommentar
+Zeile 1
+Zeile 2
+*/
+if 1 > 2 then
+	id := "add add";
+	if 1 > 2 then
+		aa := 0+1+2*3*4;
+		bb := 10;
+		read(asd);
+	fi;
+	/* Bla */
+	xx := "1";
+else
+	id := "xxx";
+fi;
+
+xx := "11 add";
+while xxx => yyy do
+	println(asdasd);
+	println(a123);
+	println("Ich in ein String");
+	a := 1;
+od;
+	
+asd := "ich asd";
+asd1 := 1 > 2;
+
+end
