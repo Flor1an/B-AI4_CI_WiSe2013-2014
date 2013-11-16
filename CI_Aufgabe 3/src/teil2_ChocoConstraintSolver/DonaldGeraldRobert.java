@@ -22,11 +22,11 @@ public class DonaldGeraldRobert {
 		IntegerVariable r = Choco.makeIntVar("r", 0, 9, Options.V_ENUM);
 		IntegerVariable b = Choco.makeIntVar("b", 0, 9, Options.V_ENUM);
 		IntegerVariable t = Choco.makeIntVar("t", 0, 9, Options.V_ENUM);
-		IntegerVariable c1 = Choco.makeIntVar("C1", 0, 1, Options.V_ENUM);
-		IntegerVariable c2 = Choco.makeIntVar("C2", 0, 1, Options.V_ENUM);
-		IntegerVariable c3 = Choco.makeIntVar("C3", 0, 1, Options.V_ENUM);
-		IntegerVariable c4 = Choco.makeIntVar("C4", 0, 1, Options.V_ENUM);
-		IntegerVariable c5 = Choco.makeIntVar("C5", 0, 1, Options.V_ENUM);
+		IntegerVariable c1 = Choco.makeIntVar("C1", 0, 1, Options.V_ENUM); //Carry 1
+		IntegerVariable c2 = Choco.makeIntVar("C2", 0, 1, Options.V_ENUM); //Carry 2
+		IntegerVariable c3 = Choco.makeIntVar("C3", 0, 1, Options.V_ENUM); //Carry 3
+		IntegerVariable c4 = Choco.makeIntVar("C4", 0, 1, Options.V_ENUM); //Carry 4
+		IntegerVariable c5 = Choco.makeIntVar("C5", 0, 1, Options.V_ENUM); //Carry 5
 
 	
 		/**
