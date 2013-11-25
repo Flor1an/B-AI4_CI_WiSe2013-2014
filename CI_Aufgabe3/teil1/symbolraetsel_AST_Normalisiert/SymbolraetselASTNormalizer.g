@@ -2,7 +2,7 @@ tree grammar SymbolraetselASTNormalizer;
 
 options {
 	tokenVocab=SymbolraetselAST;
-	ASTLabelType = Tree;
+	ASTLabelType = CommonTree;
 	output=AST;
 	}
 	
@@ -11,6 +11,9 @@ tokens {
 	ADDITION;
 	LETTER;
 	}
+	
+// applies only to the parser:
+@header { package symbolraetsel_AST_Normalisiert.output;}
 
 start	: redraw+;
 

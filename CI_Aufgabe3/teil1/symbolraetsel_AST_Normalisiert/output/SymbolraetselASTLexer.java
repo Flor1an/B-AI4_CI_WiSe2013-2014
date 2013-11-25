@@ -1,4 +1,5 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g 2013-11-22 22:00:57
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g 2013-11-25 12:59:40
+ package symbolraetsel_AST_Normalisiert.output;
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -25,15 +26,15 @@ public class SymbolraetselASTLexer extends Lexer {
         super(input,state);
 
     }
-    public String getGrammarFileName() { return "C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g"; }
+    public String getGrammarFileName() { return "C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g"; }
 
     // $ANTLR start "SPACE"
     public final void mSPACE() throws RecognitionException {
         try {
             int _type = SPACE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:27:7: ( ' ' )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:27:8: ' '
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:34:7: ( ' ' )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:34:8: ' '
             {
             match(' '); 
             skip();
@@ -53,10 +54,10 @@ public class SymbolraetselASTLexer extends Lexer {
         try {
             int _type = LINEBREAK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:28:10: ( ( '\\r' )? '\\n' )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:28:12: ( '\\r' )? '\\n'
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:35:10: ( ( '\\r' )? '\\n' )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:35:12: ( '\\r' )? '\\n'
             {
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:28:12: ( '\\r' )?
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:35:12: ( '\\r' )?
             int alt1=2;
             int LA1_0 = input.LA(1);
 
@@ -65,7 +66,7 @@ public class SymbolraetselASTLexer extends Lexer {
             }
             switch (alt1) {
                 case 1 :
-                    // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:28:12: '\\r'
+                    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:35:12: '\\r'
                     {
                     match('\r'); 
 
@@ -92,10 +93,10 @@ public class SymbolraetselASTLexer extends Lexer {
         try {
             int _type = LETTER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:29:7: ( ( 'A' .. 'Z' )+ )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:29:9: ( 'A' .. 'Z' )+
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:36:7: ( ( 'A' .. 'Z' )+ )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:36:9: ( 'A' .. 'Z' )+
             {
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:29:9: ( 'A' .. 'Z' )+
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:36:9: ( 'A' .. 'Z' )+
             int cnt2=0;
             loop2:
             do {
@@ -109,7 +110,7 @@ public class SymbolraetselASTLexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:29:9: 'A' .. 'Z'
+            	    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:36:9: 'A' .. 'Z'
             	    {
             	    matchRange('A','Z'); 
 
@@ -141,8 +142,8 @@ public class SymbolraetselASTLexer extends Lexer {
         try {
             int _type = PLUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:31:5: ( '+' )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:31:7: '+'
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:38:5: ( '+' )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:38:7: '+'
             {
             match('+'); 
 
@@ -161,8 +162,8 @@ public class SymbolraetselASTLexer extends Lexer {
         try {
             int _type = MINUS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:32:6: ( '-' )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:32:8: '-'
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:39:6: ( '-' )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:39:8: '-'
             {
             match('-'); 
 
@@ -181,8 +182,8 @@ public class SymbolraetselASTLexer extends Lexer {
         try {
             int _type = EQUALS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:33:7: ( '=' )
-            // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:33:9: '='
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:40:7: ( '=' )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:40:9: '='
             {
             match('='); 
 
@@ -197,7 +198,7 @@ public class SymbolraetselASTLexer extends Lexer {
     // $ANTLR end "EQUALS"
 
     public void mTokens() throws RecognitionException {
-        // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:8: ( SPACE | LINEBREAK | LETTER | PLUS | MINUS | EQUALS )
+        // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:8: ( SPACE | LINEBREAK | LETTER | PLUS | MINUS | EQUALS )
         int alt3=6;
         switch ( input.LA(1) ) {
         case ' ':
@@ -265,42 +266,42 @@ public class SymbolraetselASTLexer extends Lexer {
 
         switch (alt3) {
             case 1 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:10: SPACE
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:10: SPACE
                 {
                 mSPACE(); 
 
                 }
                 break;
             case 2 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:16: LINEBREAK
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:16: LINEBREAK
                 {
                 mLINEBREAK(); 
 
                 }
                 break;
             case 3 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:26: LETTER
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:26: LETTER
                 {
                 mLETTER(); 
 
                 }
                 break;
             case 4 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:33: PLUS
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:33: PLUS
                 {
                 mPLUS(); 
 
                 }
                 break;
             case 5 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:38: MINUS
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:38: MINUS
                 {
                 mMINUS(); 
 
                 }
                 break;
             case 6 :
-                // C:\\Users\\Florian\\Dropbox\\Antlr\\Praktikum3\\Symbolraetsel-AST-Normalisiert\\SymbolraetselAST.g:1:44: EQUALS
+                // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g:1:44: EQUALS
                 {
                 mEQUALS(); 
 
