@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g 2013-11-25 12:59:40
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g 2013-11-27 13:11:29
  package symbolraetsel_AST_Normalisiert.output;
 
 import org.antlr.runtime.*;

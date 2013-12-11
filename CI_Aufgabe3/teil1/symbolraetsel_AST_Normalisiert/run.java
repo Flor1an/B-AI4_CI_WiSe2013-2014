@@ -11,9 +11,6 @@ import symbolraetsel_AST_Normalisiert.output.*;
 public class run {
 	public static void main(String[] args) {
 		try {
-			// Following according to:
-			// http://www.antlr.org/wiki/display/ANTLR3/Simple+tree-based+interpeter
-
 			ANTLRFileStream input = new ANTLRFileStream("teil1/symbolraetsel_AST_Normalisiert/input.txt");
 			SymbolraetselASTLexer lexer = new SymbolraetselASTLexer(input);
 			TokenRewriteStream tokens = new TokenRewriteStream(lexer);

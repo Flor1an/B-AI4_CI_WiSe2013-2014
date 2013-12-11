@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g 2013-11-25 12:59:39
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe3\\teil1\\symbolraetsel_AST_Normalisiert\\SymbolraetselAST.g 2013-11-27 13:11:28
  package symbolraetsel_AST_Normalisiert.output;
 
 import org.antlr.runtime.*;
@@ -199,8 +199,8 @@ public class SymbolraetselASTParser extends Parser {
 
 
             // AST REWRITE
-            // elements: c24, c00, c02, c01, c20, a02, c10, c11, c00, c03, c23, c12, e02, c04, c21, a00, c13, c04, c14, c20, c14, e00, c24, c10, c22, c22, c02, e04, a03, c12
-            // token labels: e04, e00, e02, c22, c04, c03, c02, c20, c10, c00, c13, c12, c24, c23, c14
+            // elements: c10, c22, c00, a00, e04, c14, c13, c04, a03, c22, c12, c24, c20, c02, c21, c11, c03, c10, c12, a02, c20, c23, c04, c00, c01, c24, c14, c02, e00, e02
+            // token labels: e04, e00, e02, c22, c04, c03, c20, c02, c10, c00, c13, c12, c24, c23, c14
             // rule labels: a00, retval, a02, a03, c21, c11, c01
             // token list labels: 
             // rule list labels: 
@@ -212,8 +212,8 @@ public class SymbolraetselASTParser extends Parser {
             RewriteRuleTokenStream stream_c22=new RewriteRuleTokenStream(adaptor,"token c22",c22);
             RewriteRuleTokenStream stream_c04=new RewriteRuleTokenStream(adaptor,"token c04",c04);
             RewriteRuleTokenStream stream_c03=new RewriteRuleTokenStream(adaptor,"token c03",c03);
-            RewriteRuleTokenStream stream_c02=new RewriteRuleTokenStream(adaptor,"token c02",c02);
             RewriteRuleTokenStream stream_c20=new RewriteRuleTokenStream(adaptor,"token c20",c20);
+            RewriteRuleTokenStream stream_c02=new RewriteRuleTokenStream(adaptor,"token c02",c02);
             RewriteRuleTokenStream stream_c10=new RewriteRuleTokenStream(adaptor,"token c10",c10);
             RewriteRuleTokenStream stream_c00=new RewriteRuleTokenStream(adaptor,"token c00",c00);
             RewriteRuleTokenStream stream_c13=new RewriteRuleTokenStream(adaptor,"token c13",c13);
