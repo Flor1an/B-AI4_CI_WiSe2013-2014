@@ -1,4 +1,4 @@
-package symbolraetsel_AST_Normalisiert;
+package teil1.symbolraetsel_AST_Normalisiert;
 
 import java.io.IOException;
 

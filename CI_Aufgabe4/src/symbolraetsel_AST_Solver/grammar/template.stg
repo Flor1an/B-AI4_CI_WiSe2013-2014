@@ -1,0 +1,55 @@
+group template;
+sums(symbols,cons,ubertrage_list) ::= 
+<<
+package symbolraetsel_AST_Solver;
+import choco.Choco;
+import choco.Options;
+import choco.cp.model.CPModel;
+import choco.cp.solver.CPSolver;
+import choco.kernel.model.Model;
+import choco.kernel.common.logging.ChocoLogging;
+import choco.kernel.model.variables.integer.IntegerExpressionVariable;
+import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.solver.Solver;
+
+public class ChocoSolver { 
+	public static void main(String[] args) {
+		Model model = new CPModel();
+	 	
+	 	//Variablen Definition, jedes Symbol eine Variable
+		<symbols: 
+	  	{ s | IntegerVariable <s> = Choco.makeIntVar("<s>", 0, 9, Options.V_ENUM);<\n>}>
+		
+		//Carry auf 0 setzen für den Anfang
+		IntegerExpressionVariable carry = Choco.constant(0);
+		
+		//Constraint, dass alle Symbole verschieden sein müssen
+		model.addConstraint(Choco.allDifferent(<symbols; separator=", ">));
+		
+		//Constrains aus den Aufgaben 
+		<cons; seperator="\n">
+		
+		//Solver zum Lösen des Rätsels erstellen
+		Solver s = new CPSolver();
+		s.read(model);
+		ChocoLogging.toSolution();
+		s.solve();
+		
+		//Lösung ausgeben	
+		System.out.println(s.solutionToString());
+
+	}
+}
+>>
+
+sum(number1, number2, number3) ::= <<
+
+<number1.CharactersRev, number2.CharactersRev, number3.CharactersRev :
+ {n1, n2, n3| 
+ //<if(n1)><n1><else>0<endif> + <if(n2)><n2><else>0<endif> = <if(n3)><n3><else>0<endif>
+carry = Choco.sum(<if(n1)><n1><else>Choco.constant(0)<endif>,<if(n2)><n2><else>Choco.constant(0)<endif>,Choco.div(carry,10));
+model.addConstraint(Choco.eq(<if(n3)><n3><else>0<endif>,Choco.mod(carry,10)));}>
+carry = Choco.constant(0);
+>>
+
+
