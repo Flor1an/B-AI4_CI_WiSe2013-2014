@@ -17,8 +17,7 @@ public class ChocoSolver {
 		Model model = new CPModel();
 	 	
 	 	//Variablen Definition, jedes Symbol eine Variable
-		<symbols: 
-	  	{ s | IntegerVariable <s> = Choco.makeIntVar("<s>", 0, 9, Options.V_ENUM);<\n>}>
+		<symbols: { s | IntegerVariable <s> = Choco.makeIntVar("<s>", 0, 9, Options.V_ENUM);<\n\n>}>
 		
 		//Carry auf 0 setzen für den Anfang
 		IntegerExpressionVariable carry = Choco.constant(0);
@@ -46,7 +45,6 @@ sum(number1, number2, number3) ::= <<
 
 <number1.CharactersRev, number2.CharactersRev, number3.CharactersRev :
  {n1, n2, n3| 
- //<if(n1)><n1><else>0<endif> + <if(n2)><n2><else>0<endif> = <if(n3)><n3><else>0<endif>
 carry = Choco.sum(<if(n1)><n1><else>Choco.constant(0)<endif>,<if(n2)><n2><else>Choco.constant(0)<endif>,Choco.div(carry,10));
 model.addConstraint(Choco.eq(<if(n3)><n3><else>0<endif>,Choco.mod(carry,10)));}>
 carry = Choco.constant(0);

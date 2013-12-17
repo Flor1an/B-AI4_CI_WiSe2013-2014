@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g 2013-12-16 17:21:42
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g 2013-12-17 18:43:04
 
 package symbolraetsel_AST_Solver.grammar.output;
 
@@ -152,7 +152,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
     };
 
     // $ANTLR start "redraw"
-    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:1: redraw : ( ^( EQUALS ^(a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $a $b) $c) | ^( EQUALS ^( MINUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $c $b) $a) );
+    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:1: redraw : ( ^( EQUALS ^( PLUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $a $b) $c) | ^( EQUALS ^( MINUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $c $b) $a) );
     public final SymbolraetselASTNormalizer.redraw_return redraw() throws RecognitionException {
         SymbolraetselASTNormalizer.redraw_return retval = new SymbolraetselASTNormalizer.redraw_return();
         retval.start = input.LT(1);
@@ -163,8 +163,9 @@ public class SymbolraetselASTNormalizer extends TreeParser {
         CommonTree _last = null;
 
         CommonTree EQUALS3=null;
-        CommonTree EQUALS4=null;
-        CommonTree MINUS5=null;
+        CommonTree PLUS4=null;
+        CommonTree EQUALS5=null;
+        CommonTree MINUS6=null;
         SymbolraetselASTNormalizer.num_return a = null;
 
         SymbolraetselASTNormalizer.num_return b = null;
@@ -173,13 +174,15 @@ public class SymbolraetselASTNormalizer extends TreeParser {
 
 
         CommonTree EQUALS3_tree=null;
-        CommonTree EQUALS4_tree=null;
-        CommonTree MINUS5_tree=null;
+        CommonTree PLUS4_tree=null;
+        CommonTree EQUALS5_tree=null;
+        CommonTree MINUS6_tree=null;
+        RewriteRuleNodeStream stream_PLUS=new RewriteRuleNodeStream(adaptor,"token PLUS");
         RewriteRuleNodeStream stream_EQUALS=new RewriteRuleNodeStream(adaptor,"token EQUALS");
         RewriteRuleNodeStream stream_MINUS=new RewriteRuleNodeStream(adaptor,"token MINUS");
         RewriteRuleSubtreeStream stream_num=new RewriteRuleSubtreeStream(adaptor,"rule num");
         try {
-            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:7: ( ^( EQUALS ^(a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $a $b) $c) | ^( EQUALS ^( MINUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $c $b) $a) )
+            // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:7: ( ^( EQUALS ^( PLUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $a $b) $c) | ^( EQUALS ^( MINUS a= num b= num ) c= num ) -> ^( EQUALS ^( ADDITION $c $b) $a) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -189,11 +192,11 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                 if ( (LA2_1==DOWN) ) {
                     int LA2_2 = input.LA(3);
 
-                    if ( (LA2_2==MINUS) ) {
-                        alt2=2;
-                    }
-                    else if ( (LA2_2==BLOCK) ) {
+                    if ( (LA2_2==PLUS) ) {
                         alt2=1;
+                    }
+                    else if ( (LA2_2==MINUS) ) {
+                        alt2=2;
                     }
                     else {
                         NoViableAltException nvae =
@@ -217,7 +220,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
             }
             switch (alt2) {
                 case 1 :
-                    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:10: ^( EQUALS ^(a= num b= num ) c= num )
+                    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:21:10: ^( EQUALS ^( PLUS a= num b= num ) c= num )
                     {
                     _last = (CommonTree)input.LT(1);
                     {
@@ -235,17 +238,21 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                     CommonTree _save_last_2 = _last;
                     CommonTree _first_2 = null;
                     CommonTree root_2 = (CommonTree)adaptor.nil();_last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw88);
+                    PLUS4=(CommonTree)match(input,PLUS,FOLLOW_PLUS_in_redraw85);  
+                    stream_PLUS.add(PLUS4);
+
+
+
+                    match(input, Token.DOWN, null); 
+                    _last = (CommonTree)input.LT(1);
+                    pushFollow(FOLLOW_num_in_redraw89);
                     a=num();
 
                     state._fsp--;
 
                     stream_num.add(a.getTree());
-
-
-                    match(input, Token.DOWN, null); 
                     _last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw92);
+                    pushFollow(FOLLOW_num_in_redraw93);
                     b=num();
 
                     state._fsp--;
@@ -256,7 +263,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                     }
 
                     _last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw97);
+                    pushFollow(FOLLOW_num_in_redraw98);
                     c=num();
 
                     state._fsp--;
@@ -269,7 +276,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
 
 
                     // AST REWRITE
-                    // elements: b, EQUALS, a, c
+                    // elements: c, EQUALS, a, b
                     // token labels: 
                     // rule labels: retval, b, c, a
                     // token list labels: 
@@ -317,8 +324,8 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                     CommonTree _save_last_1 = _last;
                     CommonTree _first_1 = null;
                     CommonTree root_1 = (CommonTree)adaptor.nil();_last = (CommonTree)input.LT(1);
-                    EQUALS4=(CommonTree)match(input,EQUALS,FOLLOW_EQUALS_in_redraw125);  
-                    stream_EQUALS.add(EQUALS4);
+                    EQUALS5=(CommonTree)match(input,EQUALS,FOLLOW_EQUALS_in_redraw126);  
+                    stream_EQUALS.add(EQUALS5);
 
 
 
@@ -328,21 +335,21 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                     CommonTree _save_last_2 = _last;
                     CommonTree _first_2 = null;
                     CommonTree root_2 = (CommonTree)adaptor.nil();_last = (CommonTree)input.LT(1);
-                    MINUS5=(CommonTree)match(input,MINUS,FOLLOW_MINUS_in_redraw128);  
-                    stream_MINUS.add(MINUS5);
+                    MINUS6=(CommonTree)match(input,MINUS,FOLLOW_MINUS_in_redraw129);  
+                    stream_MINUS.add(MINUS6);
 
 
 
                     match(input, Token.DOWN, null); 
                     _last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw132);
+                    pushFollow(FOLLOW_num_in_redraw133);
                     a=num();
 
                     state._fsp--;
 
                     stream_num.add(a.getTree());
                     _last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw136);
+                    pushFollow(FOLLOW_num_in_redraw137);
                     b=num();
 
                     state._fsp--;
@@ -353,7 +360,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
                     }
 
                     _last = (CommonTree)input.LT(1);
-                    pushFollow(FOLLOW_num_in_redraw141);
+                    pushFollow(FOLLOW_num_in_redraw142);
                     c=num();
 
                     state._fsp--;
@@ -366,7 +373,7 @@ public class SymbolraetselASTNormalizer extends TreeParser {
 
 
                     // AST REWRITE
-                    // elements: c, EQUALS, b, a
+                    // elements: b, a, c, EQUALS
                     // token labels: 
                     // rule labels: retval, b, c, a
                     // token list labels: 
@@ -437,11 +444,11 @@ public class SymbolraetselASTNormalizer extends TreeParser {
         CommonTree _first_0 = null;
         CommonTree _last = null;
 
-        CommonTree BLOCK6=null;
-        CommonTree SYMBOL7=null;
+        CommonTree BLOCK7=null;
+        CommonTree SYMBOL8=null;
 
-        CommonTree BLOCK6_tree=null;
-        CommonTree SYMBOL7_tree=null;
+        CommonTree BLOCK7_tree=null;
+        CommonTree SYMBOL8_tree=null;
 
         try {
             // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:27:5: ( ^( BLOCK ( SYMBOL )+ ) )
@@ -454,10 +461,10 @@ public class SymbolraetselASTNormalizer extends TreeParser {
             CommonTree _save_last_1 = _last;
             CommonTree _first_1 = null;
             CommonTree root_1 = (CommonTree)adaptor.nil();_last = (CommonTree)input.LT(1);
-            BLOCK6=(CommonTree)match(input,BLOCK,FOLLOW_BLOCK_in_num173); 
-            BLOCK6_tree = (CommonTree)adaptor.dupNode(BLOCK6);
+            BLOCK7=(CommonTree)match(input,BLOCK,FOLLOW_BLOCK_in_num174); 
+            BLOCK7_tree = (CommonTree)adaptor.dupNode(BLOCK7);
 
-            root_1 = (CommonTree)adaptor.becomeRoot(BLOCK6_tree, root_1);
+            root_1 = (CommonTree)adaptor.becomeRoot(BLOCK7_tree, root_1);
 
 
 
@@ -479,10 +486,10 @@ public class SymbolraetselASTNormalizer extends TreeParser {
             	    // C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselASTNormalizer.g:27:15: SYMBOL
             	    {
             	    _last = (CommonTree)input.LT(1);
-            	    SYMBOL7=(CommonTree)match(input,SYMBOL,FOLLOW_SYMBOL_in_num175); 
-            	    SYMBOL7_tree = (CommonTree)adaptor.dupNode(SYMBOL7);
+            	    SYMBOL8=(CommonTree)match(input,SYMBOL,FOLLOW_SYMBOL_in_num176); 
+            	    SYMBOL8_tree = (CommonTree)adaptor.dupNode(SYMBOL8);
 
-            	    adaptor.addChild(root_1, SYMBOL7_tree);
+            	    adaptor.addChild(root_1, SYMBOL8_tree);
 
 
             	    }
@@ -525,15 +532,16 @@ public class SymbolraetselASTNormalizer extends TreeParser {
     public static final BitSet FOLLOW_START_in_start69 = new BitSet(new long[]{0x0000000000000004L});
     public static final BitSet FOLLOW_redraw_in_start71 = new BitSet(new long[]{0x0000000000000028L});
     public static final BitSet FOLLOW_EQUALS_in_redraw82 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_num_in_redraw88 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_num_in_redraw92 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_num_in_redraw97 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_EQUALS_in_redraw125 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_MINUS_in_redraw128 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_num_in_redraw132 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_num_in_redraw136 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_num_in_redraw141 = new BitSet(new long[]{0x0000000000000008L});
-    public static final BitSet FOLLOW_BLOCK_in_num173 = new BitSet(new long[]{0x0000000000000004L});
-    public static final BitSet FOLLOW_SYMBOL_in_num175 = new BitSet(new long[]{0x0000000000000088L});
+    public static final BitSet FOLLOW_PLUS_in_redraw85 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_num_in_redraw89 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_num_in_redraw93 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_num_in_redraw98 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_EQUALS_in_redraw126 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_MINUS_in_redraw129 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_num_in_redraw133 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_num_in_redraw137 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_num_in_redraw142 = new BitSet(new long[]{0x0000000000000008L});
+    public static final BitSet FOLLOW_BLOCK_in_num174 = new BitSet(new long[]{0x0000000000000004L});
+    public static final BitSet FOLLOW_SYMBOL_in_num176 = new BitSet(new long[]{0x0000000000000088L});
 
 }

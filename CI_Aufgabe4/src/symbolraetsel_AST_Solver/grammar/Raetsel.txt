@@ -1,5 +1,4 @@
-A+A=D
-+++
-A+A=D
+A+ZA=XB
++++A+A=B
 ===
-D+D=C
+B+B=C

@@ -1,4 +1,4 @@
-// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselAST.g 2013-12-16 17:15:54
+// $ANTLR 3.3 Nov 30, 2010 12:45:30 C:\\Users\\Florian\\Dropbox\\Git\\CI_WiSe2013-2014\\CI_Aufgabe4\\src\\symbolraetsel_AST_Solver\\grammar\\SymbolraetselAST.g 2013-12-17 18:37:23
 
 package symbolraetsel_AST_Solver.grammar.output;
 
@@ -230,9 +230,9 @@ public class SymbolraetselASTParser extends Parser {
 
 
             // AST REWRITE
-            // elements: c12, c12, c04, a03, c02, e00, c03, c14, c10, c21, c00, c24, a00, c11, a02, e04, c14, c22, c04, c22, c20, c10, c13, c01, c00, e02, c24, c02, c20, c23
+            // elements: e04, c21, a03, c12, c01, e02, c00, e00, c14, c04, c13, c03, c02, c24, c04, c00, c23, a02, a00, c22, c11, c22, c24, c20, c20, c12, c02, c14, c10, c10
             // token labels: e04, c03, c13, e00, e02, c23
-            // rule labels: retval, a00, a02, a03, c22, c04, c21, c20, c02, c11, c01, c10, c00, c12, c24, c14
+            // rule labels: retval, a00, a02, a03, c04, c22, c21, c20, c11, c02, c10, c01, c00, c12, c24, c14
             // token list labels: 
             // rule list labels: 
             // wildcard labels: 
@@ -247,14 +247,14 @@ public class SymbolraetselASTParser extends Parser {
             RewriteRuleSubtreeStream stream_a00=new RewriteRuleSubtreeStream(adaptor,"rule a00",a00!=null?a00.tree:null);
             RewriteRuleSubtreeStream stream_a02=new RewriteRuleSubtreeStream(adaptor,"rule a02",a02!=null?a02.tree:null);
             RewriteRuleSubtreeStream stream_a03=new RewriteRuleSubtreeStream(adaptor,"rule a03",a03!=null?a03.tree:null);
-            RewriteRuleSubtreeStream stream_c22=new RewriteRuleSubtreeStream(adaptor,"rule c22",c22!=null?c22.tree:null);
             RewriteRuleSubtreeStream stream_c04=new RewriteRuleSubtreeStream(adaptor,"rule c04",c04!=null?c04.tree:null);
+            RewriteRuleSubtreeStream stream_c22=new RewriteRuleSubtreeStream(adaptor,"rule c22",c22!=null?c22.tree:null);
             RewriteRuleSubtreeStream stream_c21=new RewriteRuleSubtreeStream(adaptor,"rule c21",c21!=null?c21.tree:null);
             RewriteRuleSubtreeStream stream_c20=new RewriteRuleSubtreeStream(adaptor,"rule c20",c20!=null?c20.tree:null);
-            RewriteRuleSubtreeStream stream_c02=new RewriteRuleSubtreeStream(adaptor,"rule c02",c02!=null?c02.tree:null);
             RewriteRuleSubtreeStream stream_c11=new RewriteRuleSubtreeStream(adaptor,"rule c11",c11!=null?c11.tree:null);
-            RewriteRuleSubtreeStream stream_c01=new RewriteRuleSubtreeStream(adaptor,"rule c01",c01!=null?c01.tree:null);
+            RewriteRuleSubtreeStream stream_c02=new RewriteRuleSubtreeStream(adaptor,"rule c02",c02!=null?c02.tree:null);
             RewriteRuleSubtreeStream stream_c10=new RewriteRuleSubtreeStream(adaptor,"rule c10",c10!=null?c10.tree:null);
+            RewriteRuleSubtreeStream stream_c01=new RewriteRuleSubtreeStream(adaptor,"rule c01",c01!=null?c01.tree:null);
             RewriteRuleSubtreeStream stream_c00=new RewriteRuleSubtreeStream(adaptor,"rule c00",c00!=null?c00.tree:null);
             RewriteRuleSubtreeStream stream_c12=new RewriteRuleSubtreeStream(adaptor,"rule c12",c12!=null?c12.tree:null);
             RewriteRuleSubtreeStream stream_c24=new RewriteRuleSubtreeStream(adaptor,"rule c24",c24!=null?c24.tree:null);
