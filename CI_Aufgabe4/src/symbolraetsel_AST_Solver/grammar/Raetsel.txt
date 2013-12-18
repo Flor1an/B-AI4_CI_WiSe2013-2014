@@ -1,4 +1,6 @@
-A+ZA=XB
-+++A+A=B
+ABC + DDE =  FCF
++++
+CB + BGE =  BCA
 ===
-B+B=C
+
+AEE + CBG = DGAE

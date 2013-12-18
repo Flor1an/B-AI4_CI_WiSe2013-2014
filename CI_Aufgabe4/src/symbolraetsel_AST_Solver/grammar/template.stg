@@ -1,5 +1,5 @@
 group template;
-sums(symbols,cons,ubertrage_list) ::= 
+sums(symbols,cons) ::= 
 <<
 package symbolraetsel_AST_Solver;
 import choco.Choco;

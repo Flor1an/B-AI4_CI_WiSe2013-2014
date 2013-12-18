@@ -12,7 +12,6 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.tree.CommonTree;
 import org.antlr.runtime.tree.CommonTreeNodeStream;
-import org.antlr.runtime.tree.Tree;
 import org.antlr.stringtemplate.StringTemplateGroup;
 import org.antlr.stringtemplate.language.AngleBracketTemplateLexer;
 
@@ -42,7 +41,6 @@ public class Main {
 		
 		CommonTreeNodeStream nodes = new CommonTreeNodeStream(parserAST);
 		
-		//normalizer erstellt aus dem Node-Stream den normalisierten AST.
 		SymbolraetselASTNormalizer normalizer = new SymbolraetselASTNormalizer(nodes);
 		SymbolraetselASTNormalizer.start_return normalizerResult = normalizer.start();
 		CommonTree normAST = (CommonTree)normalizerResult.getTree();

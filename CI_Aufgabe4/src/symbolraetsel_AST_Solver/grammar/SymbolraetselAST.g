@@ -21,11 +21,11 @@ package symbolraetsel_AST_Solver.grammar.output;
 package symbolraetsel_AST_Solver.grammar.output;
 }
 
-start:	c00=sym	c01=arith	c02=sym	c03=EQUALS	c04=sym
+start:	c00=letter	c01=arith	c02=letter	c03=EQUALS	c04=letter
 	a00=arith		a02=arith     		a03=arith
-	c10=sym	c11=arith 	c12=sym	c13=EQUALS	c14=sym
+	c10=letter	c11=arith 	c12=letter	c13=EQUALS	c14=letter
 	e00=EQUALS		e02=EQUALS		e04=EQUALS
-	c20=sym	c21=arith	c22=sym	c23=EQUALS	c24=sym EOF
+	c20=letter	c21=arith	c22=letter	c23=EQUALS	c24=letter EOF
 	-> 
 	^(START 
 		^($c03 ^($c01 $c00 $c02) $c04) 
@@ -38,7 +38,7 @@ start:	c00=sym	c01=arith	c02=sym	c03=EQUALS	c04=sym
 	);
 	
 
-sym
+letter
 	: SYMBOL+ -> ^(BLOCK SYMBOL+);
 
 	
